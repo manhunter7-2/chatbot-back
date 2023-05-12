@@ -7,7 +7,7 @@ const controllers = require('../cotroller/index')
 
 /**
  * @swagger
- * /api/v1/:
+ * /:
  *  get:
  *    description: Home route
  *    responses:
@@ -18,7 +18,7 @@ router.get('/', controllers.home)
 
 /**
  * @swagger
- * /api/v1/test:
+ * /test:
  *  get:
  *    description: Test route
  *    responses:
@@ -29,7 +29,7 @@ router.get('/test', controllers.test)
 
 /**
  * @swagger
- * /api/v1/dialog/questions:
+ * /dialog/questions:
  *  get:
  *    description: Use to request all questions
  *    responses:
@@ -40,7 +40,7 @@ router.get('/dialog/questions', controllers.findAllQuestions)
 
 /**
  * @swagger
- * /api/v1/dialog/answer/{id}:
+ * /dialog/answer/{id}:
  *  get:
  *    description: Use to find dialog by id
  *    parameters:

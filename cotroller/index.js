@@ -1,6 +1,6 @@
 const dialogs = require("../other/dialog.json");
 
-const dialogController = {
+const controllers = {
   home: (req, res) => {
     res.send('Hello World!')
   },
@@ -18,4 +18,4 @@ const dialogController = {
   }
 }
 
-module.exports = dialogController
+module.exports = controllers
