@@ -58,4 +58,19 @@ router.get('/dialog/questions', controllers.findAllQuestions)
  */
 router.get('/dialog/answer/:id', controllers.findById)
 
+/**
+* @swagger
+* /testMongo:
+*  get:
+*    description: Test GET MongoDB
+*    responses:
+*      '200':
+*        description: A successful response
+*      '404':
+*        description: Not found
+*      '500':
+*        description: error
+*/
+router.get('/testMongo', controllers.findMongoTest)
+
 module.exports = router

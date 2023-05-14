@@ -1,4 +1,10 @@
 const express = require('express')
+
+// MONGOOSE MODULES
+const mongoose = require('mongoose')
+const qa = require('./')
+require("dotenv").config()
+
 const app = express()
 const port = 3000
 
@@ -22,6 +28,14 @@ const swaggerOptions = {
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
+
+require('dotenv').config()
+
+mongoose.connect(process.env.MONGO_URI)
+    .then((result) => app.listen(3000))
+    .catch((err) => console.log(Error))
+
 
 app.use('/', require('./routes/routes'))
 
